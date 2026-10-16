@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f7f4">
+    <title>jq playground</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="jq playground home">
+          <span class="brand-mark">jq</span>
+          <span>playground</span>
+        </a>
+        <span class="local-label"><span class="status-dot"></span> Runs locally</span>
+      </header>
+
+      <section class="intro">
+        <p class="eyebrow">JSON query workbench</p>
+        <h1>Shape your JSON<br><span>with jq.</span></h1>
+        <p class="subhead">Write a query, paste your data, and see the result. Your input stays on this machine.</p>
+      </section>
+
+      <section class="workspace" aria-label="jq workspace">
+        <div class="panel query-panel">
+          <div class="panel-heading">
+            <label for="query">Query</label>
+            <span class="hint">⌘ / Ctrl + Enter to run</span>
+          </div>
+          <div class="query-input">
+            <span class="prompt" aria-hidden="true">›</span>
+            <textarea id="query" aria-label="jq query" spellcheck="false">.users[] | {name, city}</textarea>
+          </div>
+          <div class="panel-heading data-heading">
+            <label for="input">JSON input</label>
+            <button class="text-button" id="sample-button" type="button">Load sample</button>
+          </div>
+          <textarea id="input" class="data-input" aria-label="JSON input" spellcheck="false">{
+  "users": [
+    { "name": "Ada", "city": "London", "active": true },
+    { "name": "Linus", "city": "Helsinki", "active": false },
+    { "name": "Grace", "city": "New York", "active": true }
+  ]
+}</textarea>
+          <div class="actions">
+            <span class="run-note">Powered by jq</span>
+            <button id="run-button" class="run-button" type="button">
+              <span>Run query</span><span aria-hidden="true">↗</span>
+            </button>
+          </div>
+        </div>
+
+        <section class="panel output-panel" aria-label="Query result">
+          <div class="panel-heading">
+            <h2>Result</h2>
+            <button class="text-button" id="copy-button" type="button" disabled>Copy</button>
+          </div>
+          <pre id="output" class="output" aria-live="polite">Your result will appear here.</pre>
+          <div id="result-status" class="result-status">Ready when you are</div>
+        </section>
+      </section>
+
+      <footer><span>Explore freely.</span> Every query runs with your local jq installation.</footer>
+    </main>
+  </body>
+</html>
