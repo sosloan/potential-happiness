@@ -1,10 +1,5 @@
-const sampleInput = `{
-  "users": [
-    { "name": "Ada", "city": "London", "active": true },
-    { "name": "Linus", "city": "Helsinki", "active": false },
-    { "name": "Grace", "city": "New York", "active": true }
-  ]
-}`;
+const sampleQuery = ".keywords[] | {word, passage}";
+const sampleUrl = "/ada-reserved-keywords.json";
 
 const queryField = document.querySelector("#query");
 const inputField = document.querySelector("#input");
@@ -12,6 +7,28 @@ const outputField = document.querySelector("#output");
 const runButton = document.querySelector("#run-button");
 const copyButton = document.querySelector("#copy-button");
 const resultStatus = document.querySelector("#result-status");
+
+let sampleInput = inputField.value;
+
+async function loadSampleDocument() {
+  const response = await fetch(sampleUrl);
+  if (!response.ok) throw new Error("Could not load the Ada reserved keywords sample.");
+  sampleInput = await response.text();
+  return sampleInput;
+}
+
+async function applySample() {
+  try {
+    inputField.value = await loadSampleDocument();
+    queryField.value = sampleQuery;
+    queryField.focus();
+  } catch (error) {
+    outputField.textContent = error.message || "Unable to load sample JSON.";
+    outputField.className = "output error";
+    resultStatus.textContent = "Sample unavailable";
+    resultStatus.className = "result-status error";
+  }
+}
 
 async function runQuery() {
   runButton.disabled = true;
@@ -49,9 +66,7 @@ async function runQuery() {
 
 runButton.addEventListener("click", runQuery);
 document.querySelector("#sample-button").addEventListener("click", () => {
-  inputField.value = sampleInput;
-  queryField.value = ".users[] | {name, city}";
-  queryField.focus();
+  applySample();
 });
 copyButton.addEventListener("click", async () => {
   try {
@@ -65,3 +80,4 @@ copyButton.addEventListener("click", async () => {
 document.addEventListener("keydown", (event) => {
   if ((event.metaKey || event.ctrlKey) && event.key === "Enter") runQuery();
 });
+applySample();

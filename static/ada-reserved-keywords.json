@@ -1,0 +1,374 @@
+{
+  "language": "Ada 2012",
+  "description": "Fixed field of Ada 2012 reserved words drawn through the Lovelace prose. Seventy-three slots: no phantom word, no silent omission.",
+  "count": 73,
+  "ada_reserved_words": [
+    "abort",
+    "abs",
+    "abstract",
+    "accept",
+    "access",
+    "aliased",
+    "all",
+    "and",
+    "array",
+    "at",
+    "begin",
+    "body",
+    "case",
+    "constant",
+    "declare",
+    "delay",
+    "delta",
+    "digits",
+    "do",
+    "else",
+    "elsif",
+    "end",
+    "entry",
+    "exception",
+    "exit",
+    "for",
+    "function",
+    "generic",
+    "goto",
+    "if",
+    "in",
+    "interface",
+    "is",
+    "limited",
+    "loop",
+    "mod",
+    "new",
+    "not",
+    "null",
+    "of",
+    "or",
+    "others",
+    "out",
+    "overriding",
+    "package",
+    "pragma",
+    "private",
+    "procedure",
+    "protected",
+    "raise",
+    "range",
+    "record",
+    "rem",
+    "renames",
+    "requeue",
+    "return",
+    "reverse",
+    "select",
+    "separate",
+    "some",
+    "subtype",
+    "synchronized",
+    "tagged",
+    "task",
+    "terminate",
+    "then",
+    "type",
+    "until",
+    "use",
+    "when",
+    "while",
+    "with",
+    "xor"
+  ],
+  "keywords": [
+    {
+      "word": "abort",
+      "passage": "Ada would not abort an inquiry because its first path failed"
+    },
+    {
+      "word": "abs",
+      "passage": "abs alone did not explain the negative"
+    },
+    {
+      "word": "abstract",
+      "passage": "able to accept symbols, abstract their patterns, and return a new kind of thought"
+    },
+    {
+      "word": "accept",
+      "passage": "an engine able to accept symbols"
+    },
+    {
+      "word": "access",
+      "passage": "access to them would be limited, aliased only with care"
+    },
+    {
+      "word": "aliased",
+      "passage": "aliased only with care, and never trusted merely because they were new"
+    },
+    {
+      "word": "all",
+      "passage": "a package of ideas, private at first but meant for all"
+    },
+    {
+      "word": "and",
+      "passage": "neither and nor or could replace imagination"
+    },
+    {
+      "word": "array",
+      "passage": "an array of such records, indexed over a range"
+    },
+    {
+      "word": "at",
+      "passage": "private at first but meant for all"
+    },
+    {
+      "word": "begin",
+      "passage": "a loop would begin, continue while its condition held, and exit"
+    },
+    {
+      "word": "body",
+      "passage": "a function in spirit, though the Engine had no body to run it"
+    },
+    {
+      "word": "case",
+      "passage": "Case by case, it might add, subtract, or multiply"
+    },
+    {
+      "word": "constant",
+      "passage": "A number was not only a constant"
+    },
+    {
+      "word": "declare",
+      "passage": "to declare each wheel, column, and card as part of a larger design"
+    },
+    {
+      "word": "delay",
+      "passage": "elsif the answer required another card, it could delay its work"
+    },
+    {
+      "word": "delta",
+      "passage": "The delta between two figures was not a mystery; it was a difference the Engine could name"
+    },
+    {
+      "word": "digits",
+      "passage": "use variables with digits, carry a remainder by rem or mod"
+    },
+    {
+      "word": "do",
+      "passage": "instructions might say, \"do this,\" yet a careful pragma would make clear"
+    },
+    {
+      "word": "else",
+      "passage": "else it could proceed"
+    },
+    {
+      "word": "elsif",
+      "passage": "elsif the answer required another card, it could delay its work"
+    },
+    {
+      "word": "end",
+      "passage": "follow rules until it reached the end of a calculation"
+    },
+    {
+      "word": "entry",
+      "passage": "a protected task might wait at an entry"
+    },
+    {
+      "word": "exception",
+      "passage": "an exception must not become an excuse for chaos"
+    },
+    {
+      "word": "exit",
+      "passage": "exit when the work was done"
+    },
+    {
+      "word": "for",
+      "passage": "private at first but meant for all"
+    },
+    {
+      "word": "function",
+      "passage": "plan for Bernoulli numbers was a function in spirit"
+    },
+    {
+      "word": "generic",
+      "passage": "generic enough to serve astronomy or music"
+    },
+    {
+      "word": "goto",
+      "passage": "or goto the evidence and begin again"
+    },
+    {
+      "word": "if",
+      "passage": "If the Engine received a question, then it could select a method"
+    },
+    {
+      "word": "in",
+      "passage": "Some values would be in, others out"
+    },
+    {
+      "word": "interface",
+      "passage": "an interface might be synchronized"
+    },
+    {
+      "word": "is",
+      "passage": "nor would she terminate a question before its proof is complete"
+    },
+    {
+      "word": "limited",
+      "passage": "access to them would be limited"
+    },
+    {
+      "word": "loop",
+      "passage": "For each operation, a loop would begin"
+    },
+    {
+      "word": "mod",
+      "passage": "carry a remainder by rem or mod"
+    },
+    {
+      "word": "new",
+      "passage": "return a new kind of thought"
+    },
+    {
+      "word": "not",
+      "passage": "did not see a machine that could merely calculate"
+    },
+    {
+      "word": "null",
+      "passage": "when a result was null, the operator should raise a signal, not hide it"
+    },
+    {
+      "word": "of",
+      "passage": "a new kind of thought"
+    },
+    {
+      "word": "or",
+      "passage": "a record of a melody, a map, or a calculation"
+    },
+    {
+      "word": "others",
+      "passage": "Some values would be in, others out"
+    },
+    {
+      "word": "out",
+      "passage": "Some values would be in, others out"
+    },
+    {
+      "word": "overriding",
+      "passage": "no shortcut was overriding the design"
+    },
+    {
+      "word": "package",
+      "passage": "Her notes were a package of ideas"
+    },
+    {
+      "word": "pragma",
+      "passage": "a careful pragma would make clear that no shortcut was overriding the design"
+    },
+    {
+      "word": "private",
+      "passage": "a package of ideas, private at first but meant for all"
+    },
+    {
+      "word": "procedure",
+      "passage": "altered by procedure rather than accident"
+    },
+    {
+      "word": "protected",
+      "passage": "a protected task might wait at an entry"
+    },
+    {
+      "word": "raise",
+      "passage": "the operator should raise a signal, not hide it"
+    },
+    {
+      "word": "range",
+      "passage": "indexed over a range and altered by procedure rather than accident"
+    },
+    {
+      "word": "record",
+      "passage": "a record of a melody, a map, or a calculation"
+    },
+    {
+      "word": "rem",
+      "passage": "carry a remainder by rem or mod"
+    },
+    {
+      "word": "renames",
+      "passage": "She renames no uncertainty as certainty"
+    },
+    {
+      "word": "requeue",
+      "passage": "She would requeue the question"
+    },
+    {
+      "word": "return",
+      "passage": "return a new kind of thought"
+    },
+    {
+      "word": "reverse",
+      "passage": "reverse a sequence when the cards required it"
+    },
+    {
+      "word": "select",
+      "passage": "then it could select a method"
+    },
+    {
+      "word": "separate",
+      "passage": "let separate parts work together without confusing one another"
+    },
+    {
+      "word": "some",
+      "passage": "Some values would be in, others out"
+    },
+    {
+      "word": "subtype",
+      "passage": "a subtype could keep each quantity within its proper bounds"
+    },
+    {
+      "word": "synchronized",
+      "passage": "an interface might be synchronized"
+    },
+    {
+      "word": "tagged",
+      "passage": "A type might be tagged"
+    },
+    {
+      "word": "task",
+      "passage": "she began a patient task: to declare each wheel, column, and card"
+    },
+    {
+      "word": "terminate",
+      "passage": "nor would she terminate a question before its proof is complete"
+    },
+    {
+      "word": "then",
+      "passage": "If the Engine received a question, then it could select a method"
+    },
+    {
+      "word": "type",
+      "passage": "A type might be tagged, an interface might be synchronized"
+    },
+    {
+      "word": "until",
+      "passage": "follow rules until it reached the end of a calculation"
+    },
+    {
+      "word": "use",
+      "passage": "It would use variables with digits"
+    },
+    {
+      "word": "when",
+      "passage": "exit when the work was done"
+    },
+    {
+      "word": "while",
+      "passage": "continue while its condition held"
+    },
+    {
+      "word": "with",
+      "passage": "With Charles Babbage, she began a patient task"
+    },
+    {
+      "word": "xor",
+      "passage": "xor did not settle a choice"
+    }
+  ]
+}

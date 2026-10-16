@@ -32,19 +32,13 @@
           </div>
           <div class="query-input">
             <span class="prompt" aria-hidden="true">›</span>
-            <textarea id="query" aria-label="jq query" spellcheck="false">.users[] | {name, city}</textarea>
+            <textarea id="query" aria-label="jq query" spellcheck="false">.keywords[] | {word, passage}</textarea>
           </div>
           <div class="panel-heading data-heading">
             <label for="input">JSON input</label>
             <button class="text-button" id="sample-button" type="button">Load sample</button>
           </div>
-          <textarea id="input" class="data-input" aria-label="JSON input" spellcheck="false">{
-  "users": [
-    { "name": "Ada", "city": "London", "active": true },
-    { "name": "Linus", "city": "Helsinki", "active": false },
-    { "name": "Grace", "city": "New York", "active": true }
-  ]
-}</textarea>
+          <textarea id="input" class="data-input" aria-label="JSON input" spellcheck="false" placeholder="Loading Ada reserved keywords…"></textarea>
           <div class="actions">
             <span class="run-note">Powered by jq</span>
             <button id="run-button" class="run-button" type="button">

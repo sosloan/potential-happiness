@@ -18,8 +18,9 @@ python3 app.py
 Open <http://127.0.0.1:8000>. Set the `PORT` environment variable to use a different port.
 The server binds to localhost and does not send your JSON to an external service.
 
-Press **Run query** or use **Ctrl/⌘ + Enter**. The sample button restores the example document
-and query. Queries run with a five-second timeout.
+Press **Run query** or use **Ctrl/⌘ + Enter**. The sample button loads
+`static/ada-reserved-keywords.json` (Ada 2012 reserved words with Lovelace passages)
+and a starter query. Queries run with a five-second timeout.
 
 ## Test
 
