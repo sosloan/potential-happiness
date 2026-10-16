@@ -5,7 +5,7 @@ from http.server import ThreadingHTTPServer
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
-from app import JqHandler, run_query
+from app import JqHandler, ROOT, run_query
 
 
 class RunQueryTests(unittest.TestCase):
@@ -21,6 +21,15 @@ class RunQueryTests(unittest.TestCase):
     def test_rejects_empty_query(self):
         with self.assertRaisesRegex(ValueError, "Enter a jq query"):
             run_query("  ", "{}")
+
+    def test_queries_ada_reserved_keywords_sample(self):
+        document = (ROOT / "static" / "ada-reserved-keywords.json").read_text()
+        payload = json.loads(document)
+        self.assertEqual(payload["count"], 73)
+        self.assertEqual(len(payload["keywords"]), 73)
+        result = run_query(".keywords[] | select(.word == \"package\") | .passage", document)
+        self.assertTrue(result["ok"])
+        self.assertIn("package of ideas", result["output"])
 
 
 class ApiTests(unittest.TestCase):
@@ -53,6 +62,14 @@ class ApiTests(unittest.TestCase):
         with urlopen(self.base_url) as response:
             self.assertEqual(response.status, 200)
             self.assertIn(b"JSON query workbench", response.read())
+
+    def test_serves_ada_reserved_keywords_json(self):
+        with urlopen(self.base_url + "/ada-reserved-keywords.json") as response:
+            self.assertEqual(response.status, 200)
+            payload = json.loads(response.read())
+        self.assertEqual(payload["language"], "Ada 2012")
+        self.assertEqual(payload["count"], 73)
+        self.assertEqual(payload["ada_reserved_words"][-1], "xor")
 
     def test_runs_query_endpoint(self):
         status, result = self.post("/api/run", {"query": ".n", "input": '{"n":2}'})
